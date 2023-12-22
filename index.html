@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
+    <title>Raymart's Travel</title>
+    <!-- Box-icon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        
+
+        <div class="nav container">
+            <img src="images/logo.png" class="logo1" alt=""> 
+            <a href="#" class="logo">Raymart's <span>Travel</span></a>
+        </div>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-text container">
+            <h2 class="home-title">MY TRAVEL</h2>
+            <span class="home-subtitle">SHORT JOURNEY</span>
+        </div>
+    </section>
+    <div id="includedContent">
+    <script>
+        $(function() {
+            // Load content from another file and inject it into a specific element
+            $("#includedContent").load("modal/modal.html");
+        });
+    </script>
+    <section class="about container" id="about">
+        <div class="contentBx">
+            <h2 class="titleText">Biao beach resort</h2>
+            <p class="title-text">
+                I  went on a trip to Biao, Digos City to accompany someone to pass her thesis draft to her teacher. It was a short but pleasant 10-15 minutes ride from Tiguman, Digos City to Biao on a tricycle.I was pleasantly surprised to discover that the teacher’s house was situated near the beach. It was not something I had expected, but it turned out to be a delightful surprise. 
+            </p>
+            <a href="#" class="btn2" onclick="openModal()">Read more</a>
+        </div>
+        <div class="imgBx">
+            <img src="images/biao.jpg" alt="" class="fitBg">
+        </div>
+    </section>
+
+    <div class="post-filter container">
+        <span class="filter-item active-filter" data-filter="all">All</span>
+        <span class="filter-item" data-filter="Beach">Beach</span>
+        <span class="filter-item" data-filter="Matanao">Matanao</span>
+        <span class="filter-item" data-filter="DavaoCity">Davao City</span>
+    </div>
+    
+    <div class="post container">
+    
+        <div class="post-box Matanao">
+            <img src="images/MATANAO.jpg" alt="" class="post-img">
+            <h2 class="category">Resort</h2>
+            <a href="#" class="post-title">federico's</a>
+            <span class="post-date">29 July 2023</span>
+            <p class="post-description">As the year came to an end, we decided to have our year-end party at Matanao's Federico's Resort. The cool flowing waters of the pool and the clear skies provided the perfect backdrop for our celebrations.</p>
+            <div class="profile">
+                <a href="#" class="btn2" onclick="openModal4()">Read more</a>
+            </div>
+        </div>
+        
+    
+        <div class="post-box DavaoCity">
+            <img src="images/ecoland.jpg" alt="" class="post-img">
+            <h2 class="category">Davao City</h2>
+            <a href="#" class="post-title">ECOLAND Coastal Road</a>
+            <span class="post-date">29 July 2023</span>
+            <p class="post-description">It was an exciting day as my father and I embarked on a journey to Davao City from our hometown, Digos City. Our goal was to buy a brand new laptop for my studies.</p>
+            <a href="#" class="btn2" onclick="openModal1()">Read more</a>
+        </div>
+        <!-- Post 7 -->
+        <div class="post-box Beach">
+            <img src="images/nia.jpg" alt="" class="post-img">
+            <h2 class="category">Beach</h2>
+            <a href="#" class="post-title">NIA, Bansalan, Davao Del Sur</a>
+            <span class="post-date">21 August 2023</span>
+            <p class="post-description">The motorbike ride to the Nia Dam was scenic and invigorating. The view of the dam and flowers was picture-perfect and made for amazing photos that will last a lifetime. Hanging out with friends and experiencing new adventures made the trip absolutely unforgettable.</p>
+            <a href="#" class="btn2" onclick="openModal2()">Read more</a>
+        </div>
+
+        <div class="post-box Beach">
+            <img src="images/bday.jpg" alt="" class="post-img">
+            <h2 class="category">Beach</h2>
+            <a href="#" class="post-title">Aplaya Beach, Digos City, Davao Del Sur</a>
+            <span class="post-date">02 june 2022</span>
+            <p class="post-description">To celebrate my girlfriend's 20th birthday, we decided to head to Aplaya beach in Digos City with her family. We were greeted by the warm sun, soft sand, and the soothing sound of waves crashing against the shore. The scenery was simply mesmerizing, and we couldn't help but soak it all in.</p>
+            <a href="#" class="btn2" onclick="openModal3()">Read more</a>
+        </div>
+   
+       
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            
+            <div class="sec quicklinks">
+                <img src="images/logo.png" alt="" style="margin-left: 465%;">
+            </div>
+            
+        </div>
+        </div>
+
+
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+            }
+        
+            .modal-overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.7);
+                align-items: center;
+                justify-content: center;
+                margin-top: 2.5%;
+            }
+        
+            .modal {
+                background: #fff;
+                padding: 20px;
+                border-radius: 8px;
+                max-width: 800px;
+                width: 100%;
+                animation: fadeIn 0.5s;
+                overflow-y: auto; /* Enable vertical scrollbar if content exceeds modal height */
+                max-height: 80vh; /* Set maximum height for the modal */
+            }
+        
+            .close-btn {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                font-size: 20px;
+                cursor: pointer;
+            }
+        
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+        </style>
+        
+        <div class="modal-overlay" id="modalOverlay">
+            <div class="modal">
+                <span class="close-btn" onclick="closeModal()">×</span>
+                <div class="contentBx">
+                    <h2 class="titleText"></h2>
+                    <p class="">
+                        <div class="post-box Matanao">
+                                <img src="images/biao2.jpg" style="height: 20%;" class="post-img">
+                            </div>
+                            <h2 class="category"></h2>
+                            <a href="#" class="post-title">Biao beach resort, Digos City, Davao Del Sur</a>
+                            <span class="post-date">12 Feb 2022</span>
+                            <p class="post-description"></p>
+                        </div>
+                    </p>
+                   <p> I  went on a trip to Biao, Digos City to accompany someone to pass her thesis draft to her teacher. It was a short but pleasant 10-15 minutes ride from Tiguman, Digos City to Biao on a tricycle.I was pleasantly surprised to discover that the teacher’s house was situated near the beach. It was not something I had expected, but it turned out to be a delightful surprise. Upon arriving at the teacher’s house near the beach, we spent 2 hours relaxing, feeling the gentle breeze, and breathing in the fresh air of the beach. Every second spent there was pure happiness. We immersed ourselves in the surroundings, laughing, talking, and simply enjoying each other’s company. Spending those 2 hours at the beach was truly a fun and happy experience. 
+
+                        Although our purpose for visiting Biao was primarily academic, the tranquil beach experience became an unexpected bonus. This trip taught me the importance of finding joy in unexpected places, of embracing the surprises that life throws our way. It reminded me that sometimes the most magical moments are the ones we stumble upon, rather than meticulously plan.</p>
+                    <a href="#" class="btn2" onclick="closeModal()">Close</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal-overlay" id="modalOverlay1">
+            <div class="modal">
+                <span class="close-btn" onclick="closeModal1()">×</span>
+                <div class="contentBx">
+                    <h2 class="titleText"></h2>
+                    <p class="">
+                        <div class="post-box DavaoCity">
+                                <img src="images/ecoland.jpg" style="height: 20%;" class="post-img">
+                            </div>
+                            <h2 class="category"></h2>
+                            <a href="#" class="post-title">Biao beach resort, Digos City, Davao Del Sur</a>
+                            <span class="post-date">12 Feb 2022</span>
+                            <p class="post-description"></p>
+                        </div>
+                    </p>
+                   <p>It was an exciting day as my father and I embarked on a journey to Davao City from our hometown, Digos City. Our goal was to buy a brand new laptop for my studies. 
+
+                    Early in the morning, we prepared ourselves and made sure that we had everything we needed for the day. Dad had his motorcycle ready, all fueled up and in top condition. We hopped on, excitedly wearing our helmets, and began our one-hour and thirty-minute journey.
+                    
+                    The ride was surprisingly smooth, with the cool wind rushing against our faces. As we ventured towards Davao City, I couldn't help but appreciate the scenic view that surrounded us. The lush green fields and beautiful mountains in the distance created a picturesque backdrop for our adventure.
+                    
+                    Once we arrived at Davao City, our first stop was  Ecoland Coastal road. We couldn't resist the urge to take a picture to commemorate our trip. It was a moment of pure joy and happiness with my father.
+                    
+                    After capturing this beautiful memory, we continued our journey to find the perfect laptop. Dad had done his research and knew exactly which store to go to. The excitement of buying a new laptop for school filled me with anticipation.
+                    
+                    Upon arrival at the store, we were greeted by friendly staff who guided us through the selection of laptops. Dad carefully examined each model, ensuring it met all the specifications required for my academic needs. It was impressive to see his dedication and effort in finding the perfect laptop for me. <br> <br>
+                    
+                    Finally, after thorough consideration, we chose the ideal laptop that would accompany me through my educational journey. It was an immense sense of gratitude and joy, knowing that my father had gone above and beyond to provide me with the tools necessary for my studies.
+                    
+                    As we drove back home, the laptop secured safely in a bag, a feeling of contentment washed over me. Not only did I have a brand new laptop, but I also had cherished memories of this trip with my father. The effort he put into this journey made me appreciate his love and dedication even more.    </p>
+                    <a href="#" class="btn2" onclick="closeModal1()">Close</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-overlay" id="modalOverlay2">
+            <div class="modal">
+                <span class="close-btn" onclick="closeModal2()">×</span>
+                <div class="contentBx">
+                    <h2 class="titleText"></h2>
+                    <p class="">
+                        <div class="post-box Beach">
+                                <img src="images/nia1.jpg" style="height: 20%;" class="post-img">
+                            </div>
+                            <h2 class="category"></h2>
+                            <a href="#" class="post-title">NIA, Bansalan, Davao Del Sur</a>
+                            <span class="post-date">21 August 2023</span>
+                            <p class="post-description"></p>
+                        </div>
+                    </p>
+                   <p>The motorbike ride to Nia Dam was an adventure filled with excitement and stunning scenery. As we rode along the winding roads, the beauty of the landscape unfolded before our eyes. The view of the dam and the colorful flowers surrounding it was simply breathtaking. We couldn't resist capturing these picturesque moments with our cameras, ensuring that the memories of this trip would last a lifetime. But it wasn't just the views that made this journey unforgettable; it was also the company of friends and the new adventures we experienced together. Hanging out, laughing, and creating memories in such a beautiful setting made our trip to Nia Dam absolutely unforgettable.</p>
+                    <a href="#" class="btn2" onclick="closeModal2()">Close</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-overlay" id="modalOverlay3">
+            <div class="modal">
+                <span class="close-btn" onclick="closeModal3()">×</span>
+                <div class="contentBx">
+                    <h2 class="titleText"></h2>
+                    <p class="">
+                        <div class="post-box Beach">
+                                <img src="images/bday.jpg" style="height: 20%;" class="post-img">
+                            </div>
+                            <h2 class="category"></h2>
+                            <a href="#" class="post-title">Aplaya Beach, Digos City, Davao Del Sur</a>
+                            <span class="post-date">02 June 2022</span>
+                            <p class="post-description"></p>
+                        </div>
+                    </p>
+                   <p>To celebrate my girlfriend's 20th birthday, we decided to head to Aplaya beach in Digos City with her family. We were greeted by the warm sun, soft sand, and the soothing sound of waves crashing against the shore. The scenery was simply mesmerizing, and we couldn't help but soak it all in. The birthday party we threw for her was nothing short of a blast. We played beach games with her siblings, enjoyed delicious food, and shared laughter and love throughout the day. The memories we made on this special occasion will forever hold a special place in our hearts, reminding us of the joy and happiness we felt on that day.</p>
+                    <a href="#" class="btn2" onclick="closeModal3()">Close</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-overlay" id="modalOverlay4">
+            <div class="modal">
+                <span class="close-btn" onclick="closeModal4()">×</span>
+                <div class="contentBx">
+                    <h2 class="titleText"></h2>
+                    <p class="">
+                        <div class="post-box Beach">
+                                <img src="images/matanao1.jpg" style="height: 20%;" class="post-img">
+                            </div>
+                            <h2 class="category"></h2>
+                            <a href="#" class="post-title">Federico's, Matanao, Davao Del Sur</a>
+                            <span class="post-date">29 July 2023</span>
+                            <p class="post-description"></p>
+                        </div>
+                    </p>
+                   <p>As the year came to an end, we decided to have our year-end party at Matanao's Federico's Resort. The cool flowing waters of the pool and the clear skies provided the perfect backdrop for our celebrations. We spent the day enjoying the refreshing pool, basking in the warm sun, and indulging in delicious food. The fellowship with friends added an extra layer of fun as we laughed, shared stories, and strengthened our bonds of friendship. The day was filled with joy, laughter, and a sense of togetherness that made it truly memorable. As we reflected on the past year and embraced the excitement of the future, we were grateful for the memories we had created together.</p>
+                    <a href="#" class="btn2" onclick="closeModal4()">Close</a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/script.js"></script>
+    <script src="js/modal.js"></script>
+
+</body>
+</html>
